@@ -1,0 +1,47 @@
+﻿
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - The Coffee Shop</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />*@
+
+    <style>
+        .layoutgrid {
+            display: grid;
+            grid-template-columns: 1.5fr 10fr;
+            background: #986236;
+        }
+
+            .layoutgrid > div {
+                
+            }
+    </style>
+
+
+
+</head>
+<body>
+    <header>
+        <div class="layoutgrid">
+            <div>
+                <h1 style="text-wrap: normal; font-size: 3.2rem">The Coffee Shop</h1>
+            </div>
+
+            <div style="text-align: end;">
+                <img src="~/Images/580b57fcd9996e24bc43c550.png" style="height: 100px; margin: 50px" />
+            </div>
+        </div>
+    </header>
+
+    @RenderBody()
+
+
+</body>
+
+</html>

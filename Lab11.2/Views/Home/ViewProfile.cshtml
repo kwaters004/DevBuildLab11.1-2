@@ -1,0 +1,33 @@
+﻿@model User
+@{
+    ViewData["Title"] = "ViewProfile";
+}
+
+<style>
+    td, tr{
+        padding: 5px;
+        font-size: 2rem;
+    }
+</style>
+
+
+<h1>ViewProfile</h1>
+
+<h2>Hello @Model.FirstName @Model.LastName!</h2>
+
+<h2>Your Information:</h2>
+
+<table>
+    <tr>
+        <td>Birth Date: </td>
+        <td>@Model.BirthDate.ToString("M/d/yyyy")</td>
+    </tr>
+    <tr>
+        <td>Email: </td>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <td>Phone Number: </td>
+        <td>@Model.Phone</td>
+    </tr>
+</table>
