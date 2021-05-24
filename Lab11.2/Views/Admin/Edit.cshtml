@@ -1,0 +1,45 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: .5fr 1fr 1fr 8fr;
+    }
+
+        .grid > input[type=text] {
+
+        }
+
+        .grid > label {
+            justify-self: end;
+            padding-right: 40px;
+        }
+</style>
+
+<h1>Edit @Model.productName</h1>
+
+
+<form method="post" action="/admin/edititem/">
+    <div class="grid">
+
+        <div></div><label>Product Name: </label><input type="text" name="productName" value="@Model.productName" /><div></div>
+
+        <div></div><label>Product Description: </label><input type="text" name="productDescription" value="@Model.productDescription" /><div></div>
+
+        <div></div><label>Product Price ($): </label><input type="text" name="price" value="@Model.price" /><div></div>
+
+        <div></div><label>Product Category: </label><input type="text" name="category" value="@Model.category" /><div></div>
+
+        <div></div><input type="hidden" name="productId" value="@Model.productId" /><div></div><br />
+
+
+
+        <div></div><input type="submit" style="grid-column: 2/4; width: 200px; justify-self: center" /><div></div>
+
+    </div>
+
+</form>
+

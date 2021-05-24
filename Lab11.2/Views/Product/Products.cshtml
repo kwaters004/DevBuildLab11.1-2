@@ -1,0 +1,70 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Products";
+}
+
+
+<style>
+    td {
+        padding: 5px;
+    }
+
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: .5fr 2fr 2fr 10fr;
+    }
+
+    .prodname {
+        font-weight: bold;
+    }
+
+    .wrapper > div {
+        padding: 3px;
+    }
+</style>
+
+
+
+
+
+@foreach (string cat in ViewBag.categories)
+{
+    <h1>@cat</h1>
+
+
+    <div class="wrapper">
+
+
+        @foreach (Product prod in Model)
+        {
+
+            @if (prod.category == cat)
+            {
+                <div></div>
+                <div class="prodname"><a href="/product/Detail/@prod.productId">@prod.productName</a></div>
+                <div>$@prod.price</div>
+                <div></div>
+            }
+
+        }
+
+    </div>
+}
+
+@*<h1>Pastries</h1>
+    <div class="wrapper">
+        @foreach (Product prod in Model)
+        {
+
+            @if (prod.category == "Pastry")
+            {
+                <div></div>
+                <div class="prodname"><a href="/home/Detail/@prod.productId">@prod.productName</a></div>
+                <div>$@prod.price</div>
+                <div></div>
+            }
+
+        }
+
+    </div>*@

@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+}
+
+
+
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: .5fr 1fr 1fr 8fr;
+    }
+
+/*        .grid > input[type=text] {
+            width: 300px;
+        }*/
+
+        .grid > label {
+            justify-self: end;
+            justify-self: end;
+            padding-right: 40px;
+        }
+</style>
+
+<h1>Add Item</h1>
+
+
+<form method="post" action="/admin/additem/">
+    <div class="grid">
+
+        <div></div><label>Product Name: </label><input type="text" name="productName" /><div></div>
+
+        <div></div><label>Product Description: </label><input type="text" name="productDescription" /><div></div>
+
+        <div></div><label>Product Price ($): </label><input type="text" name="price" /><div></div>
+
+        <div></div><label>Product Category: </label><input type="text" name="category" /><div></div><br/>
+        
+
+        <div></div><input type="submit" style="grid-column: 2/4; width: 200px; justify-self: center" /><div></div>
+
+    </div>
+
+</form>

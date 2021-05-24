@@ -14,27 +14,38 @@
     <style>
         .headergrid {
             display: grid;
-            grid-template-columns: 1fr 4fr;
+            grid-template-columns: 2fr 1fr 6fr;
             background: #986236;
+            grid-column-gap: 10px;
         }
 
             .headergrid > div {
-                
+                height: auto;
+                align-self: center;
+                font-size: 2rem;
+                width: auto;
+            }
+
+            .headergrid > div > h1{
+                font-size: 2.5rem;
+                padding-left: 10px;
             }
     </style>
 
 
 
 </head>
-<body>
+<body style="background-color: wheat">
     <header>
         <div class="headergrid">
-            <div style="vertical-align: text-bottom">
-                <h1 style="font-size: 3.2rem; line-height:50px">The Coffee Shop</h1>
+            <div>
+                <h1><a href="/home/" style="text-decoration: none; color: black">The Coffee Shop</a></h1>
             </div>
-
-            <div style="text-align: end;">
-                <img src="~/Images/580b57fcd9996e24bc43c550.png" style="height: 100px; margin: 20px" />
+            <div>
+                <a href="/admin/index" style="text-decoration: none; color: black">Admin</a>
+            </div>
+            <div style="justify-self: end">
+                <img src="~/Images/580b57fcd9996e24bc43c550.png" style="height: 100px; margin: 20px;" />
             </div>
         </div>
     </header>

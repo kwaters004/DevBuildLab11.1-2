@@ -1,0 +1,10 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Remove";
+}
+
+<h1>Are you sure you want to remove @Model.productName</h1>
+
+<a href="/admin/confirmremove/@Model.productId">Yes</a><br />
+<a href="/admin/index">No</a>
+
